@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+
+
+.container {
+    background-color: #e9e9e9;
+}
+
+
+header {
+    background-color: #1a1a1a;
+}
+
+.navbar {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar img {
+    width: 300px; 
+    height: 100px;
+}
+
+.navbar-list {
+    display: flex;
+    list-style-type: none;
+    gap: 24px;
+}
+
+.navbar-item a{
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+
+}
+/*FIRST CONTAINER */
+
+.first-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.first-content-text,
+.first-content-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-content-text {
+    flex-direction: column;
+    width: 60%;
+}
+
+.first-content-text p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1em;
+    width: 80%;
+    
+}
+
+.first-content-text span:first-child {
+    color: #7209d4;
+    font-weight: bold;
+}
+
+.first-content-img {
+    width: 40%;
+}
+
+/*SECOND CONTAINER */
+
+.second-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.second-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-container {
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+
+.special-discounts { 
+    padding: 1.5em;
+    width: 33%;
+}
+
+.special-discounts:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.special-discounts:not(:last-child) {
+    border-right: 1px solid black;
+} 
+
+.special-discounts h4 {
+    text-align: center;
+    color: #7209d4;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+}
+
+.special-discounts h5 {
+    margin: 0.5em 0;
+}
+
+
+.special-discounts li {
+    font-size: 0.7em;
+    list-style-type: disc;
+    color: rgb(61, 61, 61);
+}
+
+#best-plan h4 {
+    color: #7013ce;
+}
+
+.btn {
+    margin: 0.5em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+button {
+    padding: 0.8em 1.2em;
+    border: none;
+    background-color: #7209d4;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+/* NOSSOS PARCEIROS - inicio */
+
+.parteners-content {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.parteners-content h3 {
+    margin: 1.5em;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #7209d4;
+}
+
+.parteners-content div {
+    padding: 1em;
+}
+
+
+.parteners-content img {
+    width: 150px;
+    height: 100px;
+    margin: 0.5em 1em;
+    filter: grayscale(100%);
+}
+
+.parteners-content img:hover {
+    filter: grayscale(0);
+    transition: 0.5s;
+}
+/* NOSSOS PARCEIROS - fim */
+
+
+/* MENU NOTICIAS - inicio */
+.news-container {
+    width: 25%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 1em;
+    background-image: linear-gradient(120deg, rgb(31, 6, 54), rgb(95, 17, 158), rgb(208, 179, 247));
+    border-radius: 5px;
+}
+
+.news-container h3 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0.5em;
+}
+
+.news-item {
+    margin: 0.4em 0;
+}
+
+.news-item a {
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: rgb(194, 194, 194);
+}
+
+.news-item img {
+    height: 150px;
+    width: 200px;
+    border-radius: 20px 20px;
+    border: 1px solid white;
+    margin-top: 0.3em;
+}
+
+/* MENU NOTICIAS - fim */
+
+/*PROFESSORES - INICIO */
+.third-container {
+    height: 90%;
+    margin-top: 1em;
+    background-image: linear-gradient(360deg, rgb(0, 0, 0), rgb(130, 19, 221), rgb(236, 236, 236));
+    
+}
+
+.third-content-text {
+    height: 20%;
+    position: relative;
+    width: 55%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+.third-content-text h3 {
+    text-align: center;
+    color: #7209d4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0.5em;
+    font-size: 1.6em;
+}
+
+.third-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 90%;
+}
+
+.professor-item {
+    min-width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.professor-item h6 {
+    font-size: 1.2em;
+    color: white;
+    margin: 0.2em;
+}
+
+
+.professor-item img {
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+  color: #9e4f4f;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.next-button {
+    right: 0;
+  }
+
+
+.prev-button:hover,
+.next-button:hover {
+    transition: 0.5s;
+    background-color: var(--cor3);
+    color: var();
+}
+
+
+footer {
+    background-color: black;
+    padding: 2em;
+}
+
+.footer-content {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact h3 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0.5em 0 1em 0;
+}
+
+
+.footer-contact span {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+}
+
+.footer-socialmedia {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+}
+
+
+.footer-socialmedia h6 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.footer-socialmedia span {
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+
+.footer-contact h3,
+.footer-contact span,
+.footer-socialmedia h6,
+.footer-socialmedia i {
+    color: white;
+}
+
