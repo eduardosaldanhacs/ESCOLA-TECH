@@ -1,3 +1,29 @@
+<?php    
+    require_once("db.php");
+    require_once("globals.php");
+    require_once("models/Message.php");
+    require_once("dao/AlunoDAO.php");
+
+    $alunoDao = new AlunoDAO($conn, $BASE_URL);
+    $token = $_SESSION['token'];
+    if(isset($token)) {
+       if($alunoDao->verificaToken($token)){
+            $aluno = $alunoDao->procurarPorToken($token);
+       } else {
+            
+       }
+    }
+
+    $message = new Message($BASE_URL);
+
+    $flassMessage = $message->pegarMessage();
+
+    if(!empty($flassMessage["msg"])) {
+        // Limpar a mensagem
+        $message->limparMessage();
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,16 +40,26 @@
     <script src="https://kit.fontawesome.com/156d6a1fcd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-            <header>
-                <nav class="navbar">
-                    <img src="img/logo-header2.png" alt="">
-                    <ul class="navbar-list">
-                        <li class="navbar-item"><a href="">Início</a></li>
-                        <li class="navbar-item"><a href="">Cursos</a></li>
-                        <li class="navbar-item"><a href="">Caléndario</a></li>
-                        <li class="navbar-item"><a href="">Professores</a></li>
-                        <li class="navbar-item"><a href="">Aluno</a></li>
-                    </ul>
-                </nav>
-            </header>
+    <header>
+        <nav class="navbar">
+            <img src="img/logo/logo-header2.png" alt="">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="index.php">Início</a></li>
+                <li class="navbar-item"><a href="">Cursos</a></li>
+                <li class="navbar-item"><a href="">Caléndario</a></li>
+                <li class="navbar-item"><a href="">Professores</a></li>
+                <li class="navbar-item"><a href="">Alunos</a></li>
+                <li class="navbar-item">
+                    <a href="<?= ($_SESSION['token'] != '') ? 'aluno.php' : 'login.php';?>"><button>Login</button>
+                </a></li>
+                <?php if($_SESSION['token']): ?>
+                <li class="navbar-item"><a href="sair.php"><button>Sair</button></a></li>
+                <?php endif;?>
+            </ul>
+        </nav>
+    </header>
+    <?php if(!empty($flassMessage["msg"])): ?>
+    <div class="msg-container">
+      <p class="msg <?= $flassMessage["type"] ?>"><?= $flassMessage["msg"] ?></p>
+    </div>
+  <?php endif; ?>

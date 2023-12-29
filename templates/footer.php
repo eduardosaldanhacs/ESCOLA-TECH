@@ -1,4 +1,3 @@
-</div>
         <footer>
             <div class="footer-content">
                 <div class="footer-contact">
@@ -19,6 +18,5 @@
                 </div>
             </div>
         </footer>
-    </div>
 </body>
 </html>

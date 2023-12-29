@@ -33,13 +33,31 @@ header {
     display: flex;
     list-style-type: none;
     gap: 24px;
+    align-items: center;
 }
 
-.navbar-item a{
+.navbar-item button {
+    color: white;
+    background-color: #7013ce;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    font-size: 1.0em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navbar-item button:hover {
+    background-color: white;
+    color: #7013ce;
+    transition: 0.5s ease-in-out;
+    border: 1px solid black;
+}
+
+.navbar-item:not(:last-child) a{
     color: white;
     font-size: 1.1em;
     text-decoration: none;
-
 }
 /*FIRST CONTAINER */
 
@@ -142,7 +160,7 @@ header {
     justify-content: center;
     text-align: center;
 }
-button {
+.btn button {
     padding: 0.8em 1.2em;
     border: none;
     background-color: #7209d4;
@@ -197,9 +215,10 @@ button {
     display: flex;
     text-align: center;
     flex-direction: column;
-    padding: 1em;
+    padding: 1.0em;
     background-image: linear-gradient(120deg, rgb(31, 6, 54), rgb(95, 17, 158), rgb(208, 179, 247));
     border-radius: 5px;
+    flex-wrap: nowrap;
 }
 
 .news-container h3 {
@@ -211,10 +230,14 @@ button {
 
 .news-item {
     margin: 0.4em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .news-item a {
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
     font-size: 0.8em;
     text-decoration: none;
     color: rgb(194, 194, 194);
@@ -225,7 +248,6 @@ button {
     width: 200px;
     border-radius: 20px 20px;
     border: 1px solid white;
-    margin-top: 0.3em;
 }
 
 /* MENU NOTICIAS - fim */
@@ -374,3 +396,156 @@ footer {
     color: white;
 }
 
+
+
+/*----------------LOGIN CONTAINER----------------------------- */
+
+.login-container {
+    background-image: url('../img/alunos/aluno_destaque1.jpg');
+    background-size: cover; /* Isso faz com que a imagem cubra toda a área do elemento pai */
+    background-position: center; /* Isso centraliza a imagem no elemento pai */
+    background-repeat: no-repeat;
+    height: 80vh;
+    justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.register-content,
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    background-color: transparent; /* Cor de fundo com transparência */
+    backdrop-filter: blur(10px); /* Tamanho do blur desejado */
+    width: 20%;
+    color: white;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+.login-content {
+    height: 40%;/
+}
+
+.register-content {
+    height: 75%;
+}
+
+.login-container form {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.login-container form input, select {
+    margin: 0.3em 0;
+    text-align: center;
+    width: 90%;
+    align-items: center;
+}
+
+.login-container form h4 {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.login-button {
+    padding: 1em 0;
+    background-color: #7209d4;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*ALUNO CONTAINER */
+.aluno-container {
+    height: 80vh;
+    background-image: url('../img/alunos/img5.2.jpg');
+    background-size: cover; /* Isso faz com que a imagem cubra toda a área do elemento pai */
+    background-position: center; /* Isso centraliza a imagem no elemento pai */
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.aluno-container h2 {
+    font-size: 3em;
+    color: #7013ce;
+    text-decoration: underline;
+}
+
+.aluno-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 40%;
+    justify-content: center;
+    width: 60%;;
+    margin: 0 auto;
+    background-color: transparent; /* Cor de fundo com transparência */
+    backdrop-filter: blur(5px);
+}
+
+.aluno-nome {
+    padding: 1em;
+    margin: 2em 0;
+
+}
+
+.aluno-nav ul {
+    display: flex;
+    list-style-type: none;
+    background-color: rgb(128, 128, 128); /* Cor de fundo com transparência */
+    backdrop-filter: blur(10px);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.aluno-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+}
+
+.msg-container {
+    background-color: transparent;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+
+.msg {
+    width: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    border: solid 1px #000;
+    text-align: center;
+  }
+  
+  .msg.error {
+    color: #842029;
+    background-color: #F8D7DA;
+    border-color: #F5C2C7;
+  }
+  
+  .msg.success {
+    color: #0F5132;
+    background-color: #d7f8dd;
+    border-color: #d1f7dd;
+  }
